@@ -23,21 +23,78 @@ img {
     display: block;
 }
 
+/* Style rules for mobile viewport */
+
+/* Style rules to show mobile class and hide tab-desk class */
+.tab-desk {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+
+/* Style rules for header area */
+.mobile h1 ,
+.mobile h3 {
+    padding: 2%;
+    text-align: center;
+}
+
+
 /* Style rules for navigation area */
 nav {
     background-color: #2a1f14;
 }
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
 nav ul {
-    list-style-type: none;
     margin: 0;
     align-items: center;
 }
+
 nav li {
-    display: inline-block;
+    list-style-type: none;
+    display: block;
     font-size:  1.5em;
     font-family: Geneva, Arial, sans-serif;
     font-weight: bold;
+    border-top: 0.5px solid #f6eee4;
+    text-align: center;
 }
+
+
+
+/* Style rules for main content */
+
+
+.round {
+    border-radius: 6px;
+}
+
+#info ul {
+    margin: 10%;
+}
+
+#contact {
+    text-align: center;
+}
+
+.tel-link {
+    background-color: #2a1f14;
+    padding: 2%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tel-link a {
+    color:  #f6eee4;
+}
+
 nav li a {
     display: block;
     color: #f6eee4;
@@ -48,7 +105,7 @@ nav li a {
 /* Style rules for main content */
 main {
     padding: 2%;
-    font-family: Verdana, Arial, sans-serif;
+    font-family: "Lora", serif;
 } 
 
 main p {
@@ -72,9 +129,15 @@ main ul {
     font-weight: bold;
     text-align: center;
 }
-#contact {
-    text-align: center;
+
+.mobile h1 {
+    font-family: "Emblema One", system-ui;
 }
+
+.mobile h3 {
+    font-family: "Lora", serif;
+}
+
 
 /* Style rules for footer content */
 footer {
