@@ -54,7 +54,7 @@ ul {
 
 nav ul {
     margin: 0;
-    align-items: center;
+    text-align: center; 
 }
 
 nav li {
