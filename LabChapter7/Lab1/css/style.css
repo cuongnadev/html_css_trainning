@@ -5,6 +5,11 @@
   */
 
 
+/* Style rule for box sizing applies to all elements */
+* {
+    box-sizing: border-box;
+}
+
 /* CSS Reset */
 body, header, nav, main, footer, img, h1 {
     margin: 0;
@@ -24,15 +29,14 @@ img {
     display: block;
 }
 
+
 /* Style rules for mobile viewport */
-
-
-/* Hide tab-desk class */
+    /* Hide tab-desk class */
 .tab-desk {
     display: none;
 }
 
-/* Style rules for header content */
+    /* Style rules for header content */
 header {
     text-align: center;
     font-size: 3em;
@@ -45,7 +49,7 @@ header h1 {
     font-size: 1.5em;
 }
 
-/* Style rules for navigation area */
+    /* Style rules for navigation area */
 nav {
     background-color: #373684;
 }
@@ -71,7 +75,7 @@ nav li a {
     text-decoration: none;
 }
 
-/* Style rules for main content */
+    /* Style rules for main content */
 main {
     padding: 2%;
     background-color: #e5e9fc;
@@ -86,6 +90,34 @@ main p {
 .action {
     font-size: 1.25em;
     color: #373684;
+    font-weight: bold;
+}
+
+aside {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #373684;
+    text-shadow: 3px 3px 10px #8280cb;
+}
+
+figure {
+    position: relative;
+    max-width: 275px;
+    margin: 2% auto;
+    border: 8px solid #373684;
+} 
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(55, 54, 132, 0.7);
+    color: #fff;
+    width: 100%;
+    padding: 5% 0;
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
@@ -149,6 +181,7 @@ footer a {
     text-decoration: none;
 }
 
+
 /* Media Query for Tablet Viewport */
 @media screen and (min-width: 550px), print {
     /* Tablet Viewport: Show tab-desk class, hide mobile class */
@@ -180,13 +213,26 @@ footer a {
         padding: 0.25em 0.5em;
     }
 
+
     /* Tablet Viewport: Style rule for map. */
     .map {
         width: 500px;
         height: 450px;
     }
 
-    /* Media Query for Desktop Viewport. */
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 20px;    
+    }
+
+    aside {
+        grid-column: 1 / span 2;
+    }
+
+    
+
+/* Media Query for Desktop Viewport. */
     @media screen and (min-width:769px), print{
         /* Desktop Viewport: Style rule for header. */
         header {
@@ -216,6 +262,22 @@ footer a {
             float: left;
             margin: 0 2%;
         }
+
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 20px;    
+        }
+    
+        aside {
+            grid-column: 1 / span 4;
+        }
+
+        figcaption {
+            font-size: 1em;
+        }
+
+        
 
         /* Media Query for Print */
         @media print {
